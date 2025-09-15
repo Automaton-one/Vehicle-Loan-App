@@ -1,25 +1,34 @@
-# Laravel + Vue Starter Kit
+# Vehicle Loan App
 
-## Introduction
+A simple CRUD application for managing vehicle loan applications, built with:
 
-Our Vue starter kit provides a robust, modern starting point for building Laravel applications with a Vue frontend using [Inertia](https://inertiajs.com).
+- Laravel (PHP backend)
+- Inertia.js + Vue 3 (SPA frontend)
+- MySQL (database)
+- Docker (local environment)
 
-Inertia allows you to build modern, single-page Vue applications using classic server-side routing and controllers. This lets you enjoy the frontend power of Vue combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+## Features
 
-This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the [shadcn-vue](https://www.shadcn-vue.com) component library.
+- Applicants can submit a loan application via SPA form.
+- Consultants can list, filter, search, update status, and soft-delete applications.
+- Clean, responsive UI with validation and inline errors.
 
-## Official Documentation
+## Requirements
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+- Docker
+- Docker Compose
 
-## Contributing
+## Quick Start
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourname/vehicle-loan-app.git
+   cd vehicle-loan-app
 
-## Code of Conduct
+2. Run the setup script (copies .env, generates app key, migrates DB):
+   ```bash
+   ./setup.sh
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## License
-
-The Laravel + Vue starter kit is open-sourced software licensed under the MIT license.
+3. Start containers:
+   ```bash
+   docker-compose up --build

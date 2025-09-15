@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import AppLayout from '@/layouts/app/AppSidebarLayout.vue';
-import type { BreadcrumbItemType } from '@/types';
-
-interface Props {
-    breadcrumbs?: BreadcrumbItemType[];
-}
-
-withDefaults(defineProps<Props>(), {
-    breadcrumbs: () => [],
-});
+import ConsultantToggle from '@/components/ConsultantToggle.vue';
 </script>
 
 <template>
-    <AppLayout :breadcrumbs="breadcrumbs">
-        <slot />
-    </AppLayout>
+    <div class="flex min-h-screen flex-col bg-gray-50">
+        <nav class="flex min-w-screen items-center justify-end bg-white px-6 py-3 shadow">
+            <ConsultantToggle />
+        </nav>
+        <main class="flex-1 p-6">
+            <slot />
+        </main>
+    </div>
 </template>
