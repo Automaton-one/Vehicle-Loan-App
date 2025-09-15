@@ -27,7 +27,8 @@ A simple CRUD application for managing vehicle loan applications, built with:
 
 2. Run the setup script (copies .env, generates app key, migrates DB):
    ```bash
-   .cicd/setup.sh
+   chmod +x ./.cicd/setup.sh
+   ./.cicd/setup.sh
 
 3. Start containers:
    ```bash
