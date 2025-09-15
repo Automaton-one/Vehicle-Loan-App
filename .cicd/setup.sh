@@ -3,6 +3,8 @@ set -e
 
 echo "Vehicle Loan App Setup"
 
+npm i & npm run build
+
 # Copy .env.example to .env if not already present
 if [ ! -f ".env" ]; then
   echo "Copying .env.example to .env"
